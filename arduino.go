@@ -37,5 +37,7 @@ func (ino *Arduino) Send(msg string) (err error) {
 
 	_, err = ino.port.Write([]byte(msg))
 
+	time.Sleep(1 * time.Second)
+
 	return
 }
